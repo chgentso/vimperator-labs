@@ -57,7 +57,7 @@ const Modes = Module("modes", {
             if (!this._passKeysExceptions || this._passKeysExceptions.length == 0)
                 return "IGNORE ALL KEYS (Press <S-Esc> or <Insert> to exit)";
             else
-                return "IGNORE MOST KEYS (All except " + this._passKeysExceptions + ")";
+                return "IGNORE SOME KEYS (" + this._passKeysExceptions + ")";
         }
 
         // when recording or replaying a macro

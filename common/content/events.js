@@ -931,7 +931,7 @@ const Events = Module("events", {
                 else if (this._input.buffer)
                     stop = false;
                 // Respect "unignored" keys
-                else if (modes._passKeysExceptions == null || modes._passKeysExceptions.indexOf(key) < 0)
+                else if (modes._passKeysExceptions == null || modes._passKeysExceptions.indexOf(key) >= 0)
                     stop = true;
             }
 
@@ -1105,7 +1105,7 @@ const Events = Module("events", {
         let key = events.toString(event);
         if (modes.passAllKeys) {
             // Respect "unignored" keys
-            if (modes._passKeysExceptions == null || modes._passKeysExceptions.indexOf(key) < 0) {
+            if (modes._passKeysExceptions == null || modes._passKeysExceptions.indexOf(key) >= 0) {
                 return;
             } else {
                 event.stopPropagation();
